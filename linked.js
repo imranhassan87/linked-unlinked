@@ -1,1 +1,61 @@
 // find all the users that have not been linked
+
+const allUsers = [
+    {
+        id: 100,
+        name: "Qasim Salam"
+    },
+        {
+        id: 101,
+        name: "Neelam Anwar"
+    },
+        {
+        id: 102,
+        name: "Saad Javaid"
+    },
+        {
+        id: 103,
+        name: "Talha Masood"
+    },
+        {
+        id: 104,
+        name: "Ali Bilal"
+    },
+        {
+        id: 105,
+        name: "Zain"
+    },
+    {
+        id: 106,
+        name: "Talal Ali"
+    },
+        {
+        id: 107,
+        name: "Bilal Zain"
+    },
+        {
+        id: 108,
+        name: "Mueez Ali"
+    },
+];
+
+const linked = [
+    {
+        id: 106,
+        name: "Talal Ali"
+    },
+    {
+        id: 108,
+        name: "Mueez Ali"
+    },
+]
+
+const unlinkedUsers =  (arr1,arr2) => {
+  arr1.filter((item1) => {
+    return arr2.every((item2) => {
+      return item2.id !== item1.id
+    });
+  });
+} 
+
+unlinkedUsers(allUsers,linked)
