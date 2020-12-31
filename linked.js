@@ -51,7 +51,7 @@ const linked = [
 ]
 
 const unlinkedUsers =  (arr1,arr2) => {
-  arr1.filter((item1) => {
+  return arr1.filter((item1) => {
     return arr2.every((item2) => {
       return item2.id !== item1.id
     });
